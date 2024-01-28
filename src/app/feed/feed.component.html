@@ -1,0 +1,43 @@
+<div
+  class="grid sm:w-full text-white md:grid-cols-3 sm:grid-cols-1 px-8 items-center gap-6"
+>
+  <div class="post" *ngFor="let post of posts">
+    <div class="flex justify-between">
+      <span class="flex justify-between"
+        ><img
+          class="w-10 h-auto rounded-full mr-2"
+          [src]="post.picture"
+          alt="one post"
+        />
+        <p>{{ post.user }}</p></span
+      ><i class="fa fa-ellipsis-h" style="font-size: 24px"></i>
+    </div>
+    <img class="mt-2 mb-1" [src]="post.picture" alt="one post" />
+    <div class="flex justify-between">
+      <div class="flex gap-4">
+        <i class="fa fa-heart-o" style="font-size: 24px"></i>
+        <i class="fa fa-comment-o" style="font-size: 24px"></i>
+        <i class="fa fa-paper-plane-o" style="font-size: 24px"></i>
+      </div>
+
+      <i class="fa fa-bookmark text-right" style="font-size: 24px"></i>
+    </div>
+    <div>
+      <p>
+        <i class="fa fa-heart" style="color: red"></i>
+        <strong> {{ post.likes }}</strong> Likes
+      </p>
+      <p>
+        <strong>{{ post.user }}</strong> {{ post.info }}
+      </p>
+    </div>
+    <p class="text-slate-400">View all {{ post.comments.length }} comments</p>
+    <!-- do for just two of comments in the array -->
+    <div *ngFor="let comment of post.comments.slice(0, 2)">
+      <p>
+        <strong>{{ comment.user }}</strong> {{ comment.comment }}
+        &#xf0a3;
+      </p>
+    </div>
+  </div>
+</div>
