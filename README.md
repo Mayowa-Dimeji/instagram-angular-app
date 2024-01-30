@@ -1,6 +1,6 @@
 # Instagram Clone
 
-![alt mobtile view](./src/assets/instagram-home.png)
+![Home mobile view](/src/assets/instagram-home.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
 
