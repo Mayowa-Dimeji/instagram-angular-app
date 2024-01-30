@@ -2,10 +2,10 @@
   class="grid sm:w-full text-white md:grid-cols-3 sm:grid-cols-1 px-8 items-center gap-6"
 >
   <div class="post" *ngFor="let post of posts">
-    <div class="flex justify-between">
+    <div class="flex h-11 justify-between">
       <span class="flex justify-between"
         ><img
-          class="w-10 h-auto rounded-full mr-2"
+          class="w-10 h-10 ring-slate-400 right-1 rounded-full mr-2"
           [src]="post.picture"
           alt="one post"
         />
@@ -36,7 +36,6 @@
     <div *ngFor="let comment of post.comments.slice(0, 2)">
       <p>
         <strong>{{ comment.user }}</strong> {{ comment.comment }}
-        &#xf0a3;
       </p>
     </div>
   </div>

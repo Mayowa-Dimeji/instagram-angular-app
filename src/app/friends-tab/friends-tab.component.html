@@ -1,1 +1,13 @@
-<p>friends-tab works!</p>
+<div
+  class="flex sm:w-full items-center justify-between mb-2 h-24 no-scrollbar gap-x-5 overflow-x-scroll px-4 text-white"
+>
+  <!-- <img [src]=""/> -->
+  <div class="flex" *ngFor="let item of friends">
+    <div
+      class="flex ring-4 ring-rose-500 bg-cover mr-4 opacity-100 min-h-20 min-w-20 rounded-full p-2 space-y-2 space-x-8 justify-between no-scrollbar"
+      [style.backgroundImage]="'url(' + item.picture + ')'"
+    >
+      <!-- <img w-full [src]="item.picture" /> -->
+    </div>
+  </div>
+</div>
